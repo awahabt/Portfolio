@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "./provider";
 import BgSpotlight from "@/components/BgSpotlight";
-
 
 
 export const metadata: Metadata = {
@@ -17,18 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased dark:bg-black-100`}
-      >
-        <BgSpotlight/>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body className={`antialiased text-black dark:text-white dark:bg-black-100`}>
+        <BgSpotlight />
+        {children}
       </body>
     </html>
   );
