@@ -1,13 +1,5 @@
 import { ClipboardMinus, Github, Home, Kanban, MapPin, MessageSquareCode } from "lucide-react";
 import React from "react";
-import {
-  IconBrandGithub,
-  IconBrandX,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
-} from "@tabler/icons-react";
 import Link from "next/link";
 
 const Sidebar = () => {
