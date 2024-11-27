@@ -8,8 +8,8 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default async function ProjectPage() {
   return (
-    <div className="w-full h-full min-h-screen flex flex-col flex-wrap p-10 gap-10 montserrat dark:bg-black-100 dark:text-white">
-      <div className="relative z-[10] w-full flex justify-between gap-10 ">
+    <div className="w-full h-full min-h-screen flex flex-col flex-wrap p-10 gap-10 montserrat dark:bg-black-100 dark:text-white text-black"  >
+      <div className="relative z-[20] w-full flex justify-between gap-10 ">
         <p className="text-8xl font-semibold">Abdul Wahab Tahir.</p>
         <div>
           <ThemeSwitcher/>
