@@ -56,7 +56,7 @@ const SignatureProjectCard = async () => {
                   <p className="font-semibold">Tech Stack:</p>
                   <div className="flex gap-2 flex-wrap">
                     {item.techstack.map((tech, i) => (
-                      <div key={i} className="px-3 bor rounded bg-black-200">
+                      <div key={i} className="px-3 bor rounded bg-black text-white dark:bg-gray-900">
                         {tech}
                       </div>
                     ))}
@@ -82,13 +82,13 @@ const SignatureProjectCard = async () => {
             </div>
 
             {/* Right Section */}
-            <div className="rounded flex-1 flex justify-center items-center">
+            <div className=" flex-1 flex justify-center items-center rounded-xl">
               <Image
                 src={urlFor(item.image.asset).width(500).url() || "/placeholder.png"} // Fallback to a placeholder
                 alt={item.image.altText || "Signature Project Image"}
                 width={450} // Adjust the width
                 height={350} // Adjust the height
-                className="w-full min-[1550px]:max-w-[450px] object-contain h-[350px]"
+                className="w-full shadow-sm shadow-gray-800 rounded-xl min-[1550px]:max-w-[450px] object-contain"
                 priority // Optional: Prioritize loading for these images
               />
             </div>

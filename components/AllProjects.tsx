@@ -31,7 +31,7 @@ const AllProjects = async () => {
   }
 
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full montserrat">
       <div className="my-8 p-2 rounded-xl px-10 gap-x-4 gap-y-6 grid grid-cols-1 min-[1380px]:grid-cols-2 min-[1800px]:grid-cols-3">
         {posts.map((post, index) => (
           <div
@@ -57,7 +57,7 @@ const AllProjects = async () => {
                   post.techstack.map((stack, i) => (
                     <div
                       key={i}
-                      className="px-3 rounded bor bg-gray-900 text-white"
+                      className="px-3 rounded bor bg-black  dark:bg-gray-900 text-white"
                     >
                       {stack}
                     </div>
@@ -73,7 +73,7 @@ const AllProjects = async () => {
                   className="hover:underline items-center flex gap-2"
                 >
                   Repo{" "}
-                  <div className="hover:bg-white hover:text-black rounded-full px-2 py-1.5 bor">
+                  <div className="dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black rounded-full px-2 py-1.5 bor">
                     <MoveUpRight className="w-5" />
                   </div>
                 </Link>
@@ -84,7 +84,7 @@ const AllProjects = async () => {
                   className="hover:underline items-center flex gap-2"
                 >
                   Preview{" "}
-                  <div className="hover:bg-white hover:text-black rounded-full px-2 py-1.5 bor">
+                  <div className="dark:hover:bg-white hover:bg-black hover:text-white dark:hover:text-black rounded-full px-2 py-1.5 bor">
                     <MoveRight className="w-5" />
                   </div>
                 </Link>

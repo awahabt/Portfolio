@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import BgSpotlight from "@/components/BgSpotlight";
-
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "awahabt | Portfolio",
@@ -14,10 +14,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased text-black dark:text-white dark:bg-black-100`}>
+    <html lang="en" suppressHydrationWarning>
+      <body>
         <BgSpotlight />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
