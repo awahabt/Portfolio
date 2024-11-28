@@ -28,7 +28,8 @@ const Hero: React.FC = () => {
 
           {/* Experience Section */}
           <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl">
-            Experience
+            <Link href={"/experience"}>Experience</Link>
+            
           </div>
 
           {/* Contact and Theme Switcher Section */}
