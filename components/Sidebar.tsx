@@ -40,7 +40,7 @@ const Sidebar = () => {
   ];
   return (
     <div className="max-w-[350px] flex flex-col gap-4  ">
-      <div className="bor rounded-xl p-5 flex flex-col gap-10 ">
+      <div className="border dark:border-white border-black rounded-xl p-5 flex flex-col gap-10 ">
         
 
         <div className="flex flex-col  gap-1">
@@ -56,7 +56,7 @@ const Sidebar = () => {
         <div className=" rounded flex gap-4 justify-center p-4 text-center flex-col">
           {links.map((items, id) => (
             <Link href={items.href} key={id}>
-              <div className="flex justify-center gap-2 bor py-1  rounded hover:bg-black hover:text-white dark:hover:bg-gray-900 transition-all shadow-sm shadow-white-100">
+              <div className="flex justify-center gap-2 border dark:border-white border-black py-1  rounded hover:bg-black hover:text-white dark:hover:bg-gray-900 transition-all shadow-sm shadow-white-100">
                 {items.icon}
                 {items.title}
               </div>
