@@ -32,13 +32,13 @@ const SignatureProjectCard = async () => {
   }
 
   return (
-    <div className="bor rounded-xl p-5 flex flex-col w-full max-w-full overflow-hidden">
+    <div className="border dark:border-white border-black rounded-xl p-5 flex flex-col w-full max-w-full overflow-hidden">
     {signatureProjects.map((item, index) => (
       <div
         key={index}
         className={`flex flex-wrap justify-between p-2 md:p-8 gap-8 ${
           index === signatureProjects.length - 1
-            ? "border-t-[1px] border-gray-700"
+            ? "border-t-[1px] dark:border-white border-white"
             : "border-none"
         }`}
       >
@@ -57,7 +57,7 @@ const SignatureProjectCard = async () => {
                   {item.techstack.map((tech, i) => (
                     <div
                       key={i}
-                      className="px-3 bor rounded bg-black text-white dark:bg-gray-900"
+                      className="px-3 rounded bg-black text-white dark:bg-gray-900"
                     >
                       {tech}
                     </div>
