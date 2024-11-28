@@ -39,7 +39,7 @@ const Sidebar = () => {
     },
   ];
   return (
-    <div className="max-w-[350px] montserrat flex flex-col gap-4 z-10">
+    <div className="max-w-[350px] flex flex-col gap-4  ">
       <div className="bor rounded-xl p-5 flex flex-col gap-10 ">
         
 

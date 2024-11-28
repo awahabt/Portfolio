@@ -7,16 +7,16 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen w-screen bg-white text-black dark:bg-black-100 dark:text-white bg-dot-black/[0.2] dark:bg-dot-white/[0.15] montserrat">
       {/* Background with conditional radial gradient */}
-      <div
+      {/* <div
         className="absolute top-0 z-[-2] h-full w-full bg-white dark:bg-black-100
         bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
         dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,0,0,0.3),rgba(0,0,0,0))]"
-      />
-      <div className="absolute top-5 right-10 z-[20] min-[525px]:hidden">
+      /> */}
+      <div className="absolute top-5 right-3 min-[400px]:right-10 z-[20] min-[525px]:hidden">
         <ThemeSwitcher />
       </div>
       {/* Hero Content */}
-      <div className="relative z-10 grid min-h-screen gap-4 px-10 pb-10 pt-20 ">
+      <div className="relative z-10 grid min-h-screen gap-4 px-3 min-[400px]:px-10 pb-10 pt-20 ">
         {/* Top Section */}
         <div className="grid gap-4 min-[1150px]:grid-cols-[2fr_3fr_1fr]">
           {/* Name Section */}
