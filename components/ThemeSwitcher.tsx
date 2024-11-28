@@ -5,17 +5,11 @@ import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
 
-const ThemeSwitcher = () => {
-  // const [theme, setTheme] = useState("light");
-  // useEffect(() => {
-  //   const body = document.querySelector("body");
-  //   if (body) {
-  //     body.classList.remove("light", "dark");
-  //     body.classList.add(theme);
-  //   }
-  // }, [theme]);
+interface ThemeSwitcherProps {
+  value: string;
+}
 
-  // };
+const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ value }) => {
 
   const { setTheme } = useTheme();
 
@@ -24,8 +18,11 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div onClick={toggleTheme} className="flex justify-center items-center text-black dark:text-gray-300 border border-black dark:border-[#545DA1] cursor-pointer rounded-xl">
-      <Button  className=" bg-transparent shadow-none text-black dark:text-white hover:bg-transparent">
+    <div
+      onClick={toggleTheme}
+      className={`flex justify-center items-center text-black dark:text-gray-300 border border-black dark:border-[#545DA1] cursor-pointer rounded-xl ${value}`}
+    >
+      <Button className=" bg-transparent shadow-none text-black dark:text-white hover:bg-transparent">
         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
         <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
