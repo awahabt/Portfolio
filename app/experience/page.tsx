@@ -5,7 +5,7 @@ import Sidebar from "@/components/Sidebar";
 export default function ExperiencePage() {
   return (
     <div className="p-3 gap-10 montserrat md:p-10  text-black dark:text-white">
-      <Navbar/>
+      <Navbar value={""} padding={""} />
       <div className="flex gap-10 mt-5">
         <div className="min-[1415px]:flex sticky hidden ">
           <Sidebar />
@@ -31,8 +31,7 @@ export default function ExperiencePage() {
             {/* TimeLine */}
 
             <div className="w-full px-10 flex justify-start">
-            <Education/>
-              
+              <Education />
             </div>
           </div>
         </div>

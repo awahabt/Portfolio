@@ -2,8 +2,8 @@ import Contact from "@/components/Contact";
 
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { Cover } from "@/components/ui/cover";
-import { GlobeDemo } from "@/components/ui/GlobeDemo";
 import { sendEmail } from "@/lib/mail";
+import {  Mail, MapPin } from "lucide-react";
 
 export default async function ProjectPage() {
   const send = async () => {
@@ -17,23 +17,36 @@ export default async function ProjectPage() {
   };
 
   return (
-    <div className="w-screen min-h-screen  bor flex flex-col items-center  justify-center ">
-        <ThemeSwitcher value={"absolute right-8 top-5"}/>
+    <div className="w-full min-h-screen flex flex-col flex-wrap items-center  justify-center ">
+      <ThemeSwitcher value={"absolute right-8 top-5"} />
       {/* <Navbar value={"sm:hidden"} padding={"mt-3"}/> */}
-      <div className=" grid grid-cols-2  relative z-10 justify-around py-10">
-        <div className="col-span-2 h-[200px] ">
-          <h1 className="text-4xl md:text-4xl lg:text-5xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-            Join me to build remarkable projects at
-            <br /> <Cover>Lightning speed</Cover>
-          </h1>
-        </div>
-        <div className=" border-white-100 border-r-2">
-          {/* Globe */}
-          <GlobeDemo/>
-        </div>
-        
-        <div className=" w-full ">
+
+      <div className="col-span-2 min-h-[200px] py-8 ">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
+          Join me to build remarkable projects at
+          <br /> <Cover>Lightning speed</Cover>
+        </h1>
+      </div>
+      <div className=" col-span-2 flex flex-wrap p-5 mx-3 sm:mx-10 border-black rounded-xl dark:border-white justify-center gap-10 border">
+        {" "}
+        <div className=" lg:min-w-[600px] md:min-w-[400px]">
           <Contact />
+        </div>
+        <div className="flex flex-col dark:bg-gray-900  dark:border-white bg-gray-100 justify-center rounded-xl px-10 montserrat gap-10 ">
+          {/* Globe */}
+          <div className="flex flex-col gap-5">
+            <h1 className="text-3xl font-semibold max-w-[300px]">What is your plan ? Call me</h1>
+            <p className="max-w-[300px] ">
+              You can get my contact information here and if you like, you can
+              see the urls of my pages on social networks from the bottom of the
+              page and find me there.
+            </p>
+          </div>
+          <div className="flex flex-col gap-5">
+            <p className="flex gap-2 items-center text-xl"><MapPin/>Islamabad | <span className="text-green-700 font-semibold">Pakistan</span></p>
+            <p className="flex gap-2 items-start text-md hover:underline underline-offset-2"><Mail/>contact.abdulwahabtahir<br/>@gmail.com</p>
+
+          </div>
         </div>
       </div>
 

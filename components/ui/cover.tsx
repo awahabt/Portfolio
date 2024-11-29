@@ -80,7 +80,7 @@ export const Cover = ({
                 maxSize={1}
                 particleDensity={500}
                 className="w-full h-full"
-                particleColor="#FFFFFF"
+                particleColor="#000000"
               />
             </motion.div>
           </motion.div>
