@@ -5,7 +5,7 @@ import { Cover } from "@/components/ui/cover";
 import { sendEmail } from "@/lib/mail";
 import {  Mail, MapPin } from "lucide-react";
 
-export default async function ProjectPage() {
+export default async function ContactPage() {
   const send = async () => {
     "use server";
     await sendEmail({
@@ -27,12 +27,12 @@ export default async function ProjectPage() {
           <br /> <Cover>Lightning speed</Cover>
         </h1>
       </div>
-      <div className=" col-span-2 flex flex-wrap p-5 mx-3 sm:mx-10 border-black rounded-xl dark:border-white justify-center gap-10 border">
+      <div className=" col-span-2 flex flex-wrap p-5 mx-3 sm:mx-10 rounded-xl  justify-center gap-10 border">
         {" "}
         <div className=" lg:min-w-[600px] md:min-w-[400px]">
           <Contact />
         </div>
-        <div className="flex flex-col dark:bg-gray-900  dark:border-white bg-gray-100 justify-center rounded-xl px-10 montserrat gap-10 ">
+        <div className="flex flex-col dark:bg-gray-900  dark:border-white bg-gray-100 justify-center rounded-xl p-10 montserrat gap-10 ">
           {/* Globe */}
           <div className="flex flex-col gap-5">
             <h1 className="text-3xl font-semibold max-w-[300px]">What is your plan ? Call me</h1>
