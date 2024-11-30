@@ -2,20 +2,9 @@ import Contact from "@/components/Contact";
 
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { Cover } from "@/components/ui/cover";
-import { sendEmail } from "@/lib/mail";
 import {  Mail, MapPin } from "lucide-react";
 
 export default async function ContactPage() {
-  const send = async () => {
-    "use server";
-    await sendEmail({
-      to: "contact.abdulwahabtahir@gmail.com",
-      name: "Wahab",
-      subject: "Test Mail",
-      body: `<h1>Hello World</h1>`,
-    });
-  };
-
   return (
     <div className="w-full min-h-screen flex flex-col flex-wrap items-center  justify-center ">
       <ThemeSwitcher value={"absolute right-8 top-5"} />
@@ -49,10 +38,6 @@ export default async function ContactPage() {
           </div>
         </div>
       </div>
-
-      {/* <form>
-                <button formAction={send} className="p-4 bg-black text-white">Test</button>
-            </form> */}
     </div>
   );
 }
