@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
         dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,0,0,0.3),rgba(0,0,0,0))]"
       /> */}
       <div className="absolute top-5 right-3 min-[400px]:right-10 z-[20] min-[525px]:hidden">
-        <ThemeSwitcher />
+        <ThemeSwitcher value={""} />
       </div>
       {/* Hero Content */}
       <div className="relative z-10 grid min-h-screen gap-4 px-3 min-[400px]:px-10 pb-10 pt-20 ">
@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
 
               {/* Theme Switcher */}
               <div className="hidden min-[525px]:flex   ">
-                <ThemeSwitcher />
+                <ThemeSwitcher value={""} />
               </div>
             </div>
 

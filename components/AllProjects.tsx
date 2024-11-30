@@ -1,5 +1,5 @@
 // app/components/AllProjects.tsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { fetchPosts } from "@/sanity/lib/fetchPosts";
 import Link from "next/link";
 import { MoveRight, MoveUpRight } from "lucide-react";
@@ -10,7 +10,6 @@ import {
   ModalTrigger,
   ModalBody,
   ModalContent,
-  ModalFooter,
 } from "./ui/animated-modal";
 import PostById from "./PostById";
 
@@ -33,12 +32,29 @@ type Post = {
   };
 };
 
-const AllProjects = async () => {
-  const posts: Post[] = await fetchPosts();
+const AllProjects = () => {
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
   const [selectedPostId, setSelectedPostId] = useState<string | null>(null);
 
-  if (!posts.length) {
-    return <p>Loading posts...</p>; // Show loading state or error
+  // Fetch posts data in useEffect
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchPosts();
+        setPosts(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p>Loading posts...</p>; // Show loading state
   }
 
   return (
@@ -58,11 +74,11 @@ const AllProjects = async () => {
                     alt={post.image.altText || "Project Image"}
                     width={500}
                     height={200}
-                    className="w-full h-[200px]  rounded-xl shadow-sm shadow-gray-800 "
+                    className="w-full h-[200px] rounded-xl shadow-sm shadow-gray-800 "
                   />
                 </div>
                 <div className="flex flex-col flex-wrap py-5">
-                  <p className="text-2xl font-semibold hover:underline  text-start">
+                  <p className="text-2xl font-semibold hover:underline text-start">
                     {post.title}
                   </p>
                   <p className="w-full mt-5 text-sm text-start">
@@ -74,7 +90,7 @@ const AllProjects = async () => {
                       post.techstack.map((stack, i) => (
                         <div
                           key={i}
-                          className="px-3 rounded  bg-black dark:bg-gray-900 text-white"
+                          className="px-3 rounded bg-black dark:bg-gray-900 text-white"
                         >
                           {stack}
                         </div>

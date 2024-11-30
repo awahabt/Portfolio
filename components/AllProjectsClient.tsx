@@ -2,8 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { MoveRight, MoveUpRight } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import {
