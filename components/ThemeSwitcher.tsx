@@ -28,17 +28,6 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ value }) => {
         <span className="sr-only">Toggle theme</span>
       </Button>
     </div>
-    // <div
-    //   onClick={toggleTheme}
-    //   className="flex justify-center items-center text-black dark:text-gray-300 bor2 cursor-pointer rounded-xl"
-    // >
-    //   {/* Theme Switcher */}
-    //   {theme === "light" ? (
-    //     <MoonStar className="w-8 h-8" />
-    //   ) : (
-    //     <SunMedium className="w-8 h-8" />
-    //   )}
-    // </div>
   );
 };
 

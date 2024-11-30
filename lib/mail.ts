@@ -9,7 +9,7 @@ interface EmailParams {
 
 export async function sendEmail({ to, name, subject, body }: EmailParams) {
   const { SMTP_PASSWORD, SMTP_EMAIL } = process.env;
-
+  console.log(name)
   if (!SMTP_PASSWORD || !SMTP_EMAIL) {
     throw new Error("SMTP credentials are missing.");
   }

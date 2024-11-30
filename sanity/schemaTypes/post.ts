@@ -17,8 +17,13 @@ export default {
       },
     },
     {
-      name: "description",
-      title: "Description",
+      name: "smallDescription",
+      title: "Small Description",
+      type: "string",
+    },
+    {
+      name: "detailDescription",
+      title: "Detail Description",
       type: "string",
     },
     {
