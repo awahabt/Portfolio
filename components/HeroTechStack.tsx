@@ -17,7 +17,7 @@ const HeroTechStack = () => {
           className=" justify-center group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           
         >
-          <div className=" md:max-w-32 md:text-xs lg:text-base text-sm text-gray-300 z-10">
+          <div className=" md:max-w-32 md:text-xs lg:text-base text-sm dark:text-gray-300 text-gray-900 z-10 ">
             My tech stack
           </div>
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
