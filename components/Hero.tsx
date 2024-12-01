@@ -2,6 +2,9 @@ import React from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Link from "next/link";
 import { MoveUpRight } from "lucide-react";
+import HeroExperience from "./HeroExperience";
+import HeroAbout from "./HeroAbout";
+import HeroProjects from "./HeroProjects";
 
 const Hero: React.FC = () => {
   return (
@@ -27,9 +30,17 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl">
-            <Link href={"/experience"}>Experience</Link>
-            
+          <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl flex flex-col gap-4">
+            <div className="flex">
+              <Link
+                href={"/experience"}
+                className="hover:underline underline-offset-4"
+              >
+                Experience
+              </Link>
+            </div>
+            <hr />
+            <HeroExperience />
           </div>
 
           {/* Contact and Theme Switcher Section */}
@@ -62,15 +73,22 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="p-10 text-4xl font-semibold border border-black dark:border-[#545DA1] rounded-xl">
-            About Us
+        <div className="grid gap-4 lg:grid-cols-3">
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4">
+            <div>About</div>
+            <hr />
+            <HeroAbout />
           </div>
-          <div className="p-10 text-4xl font-semibold border border-black dark:border-[#545DA1] rounded-xl">
-            <Link href="/project">Projects</Link>
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4">
+            <div>
+              <Link href="/project" className="hover:underline underline-offset-4">Projects</Link>
+            </div>
+            <hr />
+            <HeroProjects/>
           </div>
-          <div className="p-10 text-4xl font-semibold border border-black dark:border-[#545DA1] rounded-xl">
-            Tech Stack
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4">
+            <div>Tech Stack</div>
+            <hr />
           </div>
         </div>
       </div>
