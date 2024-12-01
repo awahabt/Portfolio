@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl flex flex-col gap-4 col-span-1 min-[1200px]:col-span-1">
+          <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl flex flex-col gap-4 col-span-1 min-[1200px]:col-span-1 group/bento transition duration-200">
             <div className="flex">
               <Link
                 href={"/experience"}
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
 
           {/* Contact and Theme Switcher Section */}
           <div className="flex flex-col gap-4">
-            <div className="flex w-full gap-x-4 h-20">
+            <div className="flex w-full gap-x-4 h-20 ">
               {/* Contact Link */}
               <Link
                 href="/contact"
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Development Section */}
-            <div className="h-full gap-4 flex flex-col min-w-[300px] p-10 text-2xl font-bold border border-black dark:border-[#545DA1] rounded-xl">
+            <div className="h-full gap-4 flex flex-col min-w-[300px] p-10 text-2xl font-bold border border-black dark:border-[#545DA1] rounded-xl group/bento transition duration-200">
               <div>In Development</div>
               <hr />
               <HeroInDevelopment/>
@@ -74,19 +74,19 @@ const Hero: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="grid gap-4  lg:grid-cols-5">
-          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 min-[1400px]:col-span-2">
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 min-[1400px]:col-span-2 group/bento transition duration-200">
             <div>About</div>
             <hr />
             <HeroAbout />
           </div>
-          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 lg:col-span-2  min-[1400px]:col-span-1">
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 lg:col-span-2  min-[1400px]:col-span-1  group/bento transition duration-200">
             <div>
               <Link href="/project" className="hover:underline underline-offset-4">Projects</Link>
             </div>
             <hr />
             <HeroProjects/>
           </div>
-          <div className="border col-span-5 lg:col-span-3 min-[1400px]:col-span-2  border-black dark:border-[#545DA1] rounded-xl">
+          <div className="border col-span-5 lg:col-span-3 min-[1400px]:col-span-2  border-black dark:border-[#545DA1] rounded-xl group/bento transition duration-200">
            <HeroTechStack/>
 
           </div>

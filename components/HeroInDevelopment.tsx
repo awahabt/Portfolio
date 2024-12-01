@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroInDevelopment = () => {
   return (
-    <div className="h-full text-lg font-normal flex flex-col justify-between ">
+    <div className="h-full text-lg font-normal flex flex-col justify-between group-hover/bento:translate-x-2 transition duration-200 ">
       <div className="text-xl font-semibold">Connect | Social network for students</div>
       <div className="text-lg">Developed a platform that allows students to collaborate effectively,
       share resources, and create a productive environment.</div>

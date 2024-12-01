@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroExperience = () => {
   return (
-    <div className="text-xl font-normal flex flex-col flex-wrap gap-6">
+    <div className="text-xl font-normal flex flex-col flex-wrap gap-6 group-hover/bento:translate-x-2 transition duration-200 ">
       {/* Role  */}
       <div className="flex flex-col gap-2  text-xl "><div className="text-2xl font-bold">VirtuoByte</div>
         <div className="flex flex-wrap justify-between">
