@@ -5,7 +5,7 @@ const HeroExperience = () => {
     <div className="text-xl font-normal flex flex-col flex-wrap gap-6">
       {/* Role  */}
       <div className="flex flex-col gap-2  text-xl "><div className="text-2xl font-bold">VirtuoByte</div>
-        <div className="flex justify-between">
+        <div className="flex flex-wrap justify-between">
           <div className=" text-2xl font-semibold max-w-[300px]">
             Frontend Engineer
           </div>
