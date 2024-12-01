@@ -4,18 +4,20 @@ import { cn } from "@/utils/cn";
 type SpotlightProps = {
   className?: string;
   fill?: string;
+  style?: React.CSSProperties;
 };
 
-export const Spotlight = ({ className, fill }: SpotlightProps) => {
+export const Spotlight = ({ className, fill, style }: SpotlightProps) => {
   return (
     <svg
       className={cn(
-        "animate-spotlight pointer-events-none absolute z-[1]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
+        "pointer-events-none absolute z-[1] h-[169%] w-[138%] lg:w-[84%] opacity-100 transition-transform",
         className
       )}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
       fill="none"
+      style={style}
     >
       <g filter="url(#filter)">
         <ellipse
