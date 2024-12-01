@@ -29,13 +29,14 @@ const Hero: React.FC = () => {
 
           {/* Experience Section */}
           <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl flex flex-col gap-4 col-span-1 min-[1200px]:col-span-1 group/bento transition duration-200">
-            <div className="flex">
+            <div className="flex justify-between items-center">
               <Link
                 href={"/experience"}
                 className="hover:underline underline-offset-4"
               >
                 Experience
               </Link>
+              <div><Link  className="float-right border border-black dark:border-[#545DA1] dark:hover:bg-white dark:hover:text-black rounded-full p-3 hover:bg-black hover:text-white" href={"/experience"}><MoveUpRight/></Link></div>
             </div>
             <hr />
             <HeroExperience />
