@@ -61,42 +61,46 @@ const Contact = () => {
       message: validateField("message", formData.message),
     };
   
-    // Set errors to the state
     setErrors(validationErrors);
   
-    // Check if there are any validation errors
     const hasErrors = Object.values(validationErrors).some((error) => error !== "");
     if (!hasErrors) {
       setIsSubmitting(true);
       setSuccessMessage("");
   
       try {
-        // Send form data to the API route
-        const response = await fetch("/api/contact", {
+        // Type for API response
+        interface ApiResponse {
+          message?: string;
+          error?: string;
+        }
+  
+        // Fetch data from the API
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData), // Send form data as JSON
+          body: JSON.stringify(formData),
         });
   
-        const result = await response.json();
+        const result: ApiResponse = await response.json();
   
-        // Check if email was sent successfully
         if (response.ok) {
-          setSuccessMessage("Your message has been sent successfully!");
+          setSuccessMessage(result.message || "Your message has been sent successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
         } else {
           setSuccessMessage(result.error || "An error occurred. Please try again.");
         }
       } catch (error) {
-        console.error("Failed to send email:", error);
+        console.log("Failed to send email:", error);
         setSuccessMessage("An error occurred. Please try again.");
       } finally {
-        setIsSubmitting(false); // Stop the submitting state
+        setIsSubmitting(false);
       }
     }
   };
+  
   
 
   return (
