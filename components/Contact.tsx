@@ -1,7 +1,9 @@
 "use client"
 import React, { useState } from "react";
 
+
 const Contact = () => {
+  const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,6 +18,9 @@ const Contact = () => {
     message: "",
   });
 
+  
+console.log("SMTP_EMAIL:", SMTP_EMAIL);
+console.log("SMTP_PASSWORD:", SMTP_PASSWORD ? "Loaded" : "Missing");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -61,33 +66,30 @@ const Contact = () => {
       message: validateField("message", formData.message),
     };
   
+    // Set errors to the state
     setErrors(validationErrors);
   
+    // Check if there are any validation errors
     const hasErrors = Object.values(validationErrors).some((error) => error !== "");
     if (!hasErrors) {
       setIsSubmitting(true);
       setSuccessMessage("");
   
       try {
-        // Type for API response
-        interface ApiResponse {
-          message?: string;
-          error?: string;
-        }
-  
-        // Fetch data from the API
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/contact`, {
+        // Send form data to the API route
+        const response = await fetch("/api/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(formData), // Send form data as JSON
         });
   
-        const result: ApiResponse = await response.json();
+        const result = await response.json();
   
+        // Check if email was sent successfully
         if (response.ok) {
-          setSuccessMessage(result.message || "Your message has been sent successfully!");
+          setSuccessMessage("Your message has been sent successfully!");
           setFormData({ name: "", email: "", subject: "", message: "" }); // Reset form
         } else {
           setSuccessMessage(result.error || "An error occurred. Please try again.");
@@ -96,11 +98,10 @@ const Contact = () => {
         console.log("Failed to send email:", error);
         setSuccessMessage("An error occurred. Please try again.");
       } finally {
-        setIsSubmitting(false);
+        setIsSubmitting(false); // Stop the submitting state
       }
     }
   };
-  
   
 
   return (
