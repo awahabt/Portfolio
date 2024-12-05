@@ -38,7 +38,7 @@ const SignatureProjectCard = async () => {
         key={index}
         className={`flex flex-wrap justify-between p-2 md:p-8 gap-8 ${
           index === signatureProjects.length - 1
-            ? "border-t-[1px] dark:border-white border-white"
+            ? "border-t-[1px] dark:border-white border-black"
             : "border-none"
         }`}
       >
