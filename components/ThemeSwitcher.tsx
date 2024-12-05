@@ -20,7 +20,7 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ value }) => {
   return (
     <div
       onClick={toggleTheme}
-      className={`flex justify-center items-center text-black dark:text-gray-300 border border-black dark:border-[#545DA1] cursor-pointer rounded-xl ${value}`}
+      className={`flex justify-center items-center text-black dark:text-gray-300 border border-black dark:border-[#545DA1] cursor-pointer rounded-xl ${value} hover:shadow-lg shadow-input dark:shadow-none`}
     >
       <Button className=" bg-transparent shadow-none text-black dark:text-white hover:bg-transparent">
         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
