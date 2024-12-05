@@ -22,7 +22,6 @@ export default function ExperiencePage() {
 
           <hr className="border dark:border-white border-black " />
           <div className="flex flex-col gap-10">
-            <h2 className="text-3xl font-semibold ">Field Experience</h2>
             <div className="text-xl font-normal flex flex-col flex-wrap gap-6 group-hover/bento:translate-x-2 transition duration-200 ">
               {/* Role  */}
               <div className="flex flex-col gap-2  text-xl ">
@@ -38,10 +37,10 @@ export default function ExperiencePage() {
               </div>
 
               {/* techStack  */}
-              <div className="flex gap-2 flex-col">
+              <div className="flex gap-4 flex-col">
                 {/* Description  */}
-                <div className="dark:text-white">
-                  <ul className="list-disc pl-6 space-y-1 text-[15px]">
+                <div className="dark:text-white max-w-[900px]">
+                  <ul className="list-disc pl-6 space-y-1 text-[15px] ">
                     <li className=" ">
                       Developed and maintained responsive, user-friendly
                       front-end interfaces, ensuring optimal performance across
@@ -77,6 +76,9 @@ export default function ExperiencePage() {
           <hr className="border dark:border-white border-black" />
           <div className="flex flex-col gap-10">
             <p className="text-5xl font-semibold ">Education</p>
+            <p>
+            Empowered with cutting-edge software engineering expertise, crafting innovative web solutions with precision and creativity.
+            </p>
 
             {/* TimeLine */}
 
