@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen w-screen bg-white text-black dark:bg-black-100 dark:text-white bg-dot-black/[0.2] dark:bg-dot-white/[0.15] montserrat">
       {/* Background with conditional radial gradient */}
-      
+
       <div className="absolute top-5 right-3 min-[400px]:right-10 z-[20] min-[525px]:hidden">
         <ThemeSwitcher value={""} />
       </div>
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl flex flex-col gap-4 col-span-1 min-[1200px]:col-span-1 group/bento transition duration-200">
+          <div className="border border-black dark:border-[#545DA1] p-10 text-4xl font-semibold rounded-xl flex flex-col gap-4 col-span-1 min-[1200px]:col-span-1 group/bento transition duration-200 hover:shadow-lg shadow-input dark:shadow-none ">
             <div className="flex justify-between items-center">
               <Link
                 href={"/experience"}
@@ -36,7 +36,14 @@ const Hero: React.FC = () => {
               >
                 Experience
               </Link>
-              <div><Link  className="float-right border border-black dark:border-[#545DA1] dark:hover:bg-white dark:hover:text-black rounded-full p-3 hover:bg-black hover:text-white" href={"/experience"}><MoveUpRight/></Link></div>
+              <div>
+                <Link
+                  className="float-right border border-black dark:border-[#545DA1] dark:hover:bg-white dark:hover:text-black rounded-full p-3 hover:bg-black hover:text-white"
+                  href={"/experience"}
+                >
+                  <MoveUpRight />
+                </Link>
+              </div>
             </div>
             <hr />
             <HeroExperience />
@@ -65,31 +72,35 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Development Section */}
-            <div className="h-full gap-4 flex flex-col min-w-[300px] p-10 text-2xl font-bold border border-black dark:border-[#545DA1] rounded-xl group/bento transition duration-200">
+            <div className="h-full gap-4 flex flex-col min-w-[300px] p-10 text-2xl font-bold border border-black dark:border-[#545DA1] rounded-xl group/bento transition duration-200 hover:shadow-lg shadow-input dark:shadow-none ">
               <div>In Development</div>
               <hr />
-              <HeroInDevelopment/>
+              <HeroInDevelopment />
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="grid gap-4  lg:grid-cols-5">
-          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 min-[1400px]:col-span-2 group/bento transition duration-200">
+        <div className="grid gap-4  lg:grid-cols-5 ">
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 min-[1400px]:col-span-2 group/bento transition duration-200 hover:shadow-lg shadow-input dark:shadow-none ">
             <div>About</div>
             <hr />
             <HeroAbout />
           </div>
-          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 lg:col-span-2  min-[1400px]:col-span-1  group/bento transition duration-200">
+          <div className="p-10 text-3xl font-semibold border border-black dark:border-[#545DA1] rounded-xl flex flex-col gap-4 col-span-5 lg:col-span-2  min-[1400px]:col-span-1  group/bento transition duration-200 hover:shadow-lg shadow-input dark:shadow-none ">
             <div>
-              <Link href="/project" className="hover:underline underline-offset-4">Projects</Link>
+              <Link
+                href="/project"
+                className="hover:underline underline-offset-4"
+              >
+                Projects
+              </Link>
             </div>
             <hr />
-            <HeroProjects/>
+            <HeroProjects />
           </div>
           <div className="border col-span-5 lg:col-span-3 min-[1400px]:col-span-2  border-black dark:border-[#545DA1] rounded-xl group/bento transition duration-200">
-           <HeroTechStack/>
-
+            <HeroTechStack />
           </div>
         </div>
       </div>
