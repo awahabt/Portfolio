@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
               {/* Contact Link */}
               <Link
                 href="/contact"
-                className="w-full col-span-3 flex flex-1 items-center justify-center rounded-xl border border-black dark:border-[#545DA1] font-medium"
+                className="w-full col-span-3 flex flex-1 items-center justify-center rounded-xl border border-black dark:border-[#545DA1] font-medium hover:shadow-lg shadow-input dark:shadow-none"
               >
                 <div className="flex items-center gap-2 py-2">
                   <span className="text-2xl font-bold">Contact</span>
@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
               </Link>
 
               {/* Theme Switcher */}
-              <div className="hidden min-[525px]:flex   ">
+              <div className="hidden min-[525px]:flex  ">
                 <ThemeSwitcher value={""} />
               </div>
             </div>
