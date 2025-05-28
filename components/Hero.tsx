@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
             <hr />
-            <HeroExperience />
+            <HeroExperience hero={true} />
           </div>
 
           {/* Contact and Theme Switcher Section */}
